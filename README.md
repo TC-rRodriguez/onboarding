@@ -47,7 +47,7 @@ Here are some resources that can help you understand and apply the concepts of C
 We hope this repository serves as a useful tool to enhance your C# programming skills and your understanding of Clean Code and SOLID design principles!
 
 1. Clone this repository to your local.
-2. Create a branch with a descriptive name for your coding exercise. You can create a branch for each topic (Clean Code, SOLID Design Principles, etc.). Do not forguet to add your username to the branch name so we will avoid conflicts due to same branch topic for different people.
+2. Create a branch with a descriptive name for your coding exercise. You can create a branch for each topic (Clean Code, SOLID Design Principles, etc.). Do not forget to add your username to the branch name so we will avoid conflicts due to same branch topic for different people.
 3. Work the corresponding coding exercise in your branch, follow the next instructions: 
     1. In the Clean Code project, you have to identify all the bad practices on the code and refactoring the appropiate changes.
     2. In the SOLID Design Principle folder, you will have a project for each principle. Identify bad practices according to the principle you are working on and make the necessary modifications to the code to comply with the good practices of the SOLID principles.
