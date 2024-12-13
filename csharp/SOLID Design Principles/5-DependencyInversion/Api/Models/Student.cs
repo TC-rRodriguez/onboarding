@@ -31,7 +31,7 @@ public class Student
     public Student()
     {
         Fullname = string.Empty;
-        Grades = new List<double>();
+        Grades = [];
     }
 
     /// <summary>
