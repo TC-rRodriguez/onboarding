@@ -1,11 +1,18 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Api.Interfaces;
+using Api.Services;
+using DependencyInversion;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<IStudentRepository, StudentRepository>();
+builder.Services.AddSingleton<ILogBook, Logbook>();
+builder.Services.AddSingleton<IStudentService, StudentService>();
+
 
 var app = builder.Build();
 
