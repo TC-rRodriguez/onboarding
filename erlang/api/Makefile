@@ -7,5 +7,8 @@ run:
 test:
 	docker run -it --rm api rebar3 ct
 
+cover:
+	docker run -it --rm api rebar3 ct --cover
+
 clean:
 	docker rmi api

@@ -41,6 +41,22 @@ make test
 
 This will execute the tests inside a Docker container.
 
+## Test Coverage
+
+The project includes test coverage analysis. Below is the summary of the coverage report:
+
+| Module             | Coverage % |
+|--------------------|------------|
+| api_app            | 77%        |
+| api_sup            | 100%       |
+| event_controller   | 71%        |
+| event_db           | 100%       |
+| event_parser       | 92%        |
+| event_service      | 85%        |
+| **Total**          | **83%**    |
+
+The detailed coverage report can be found in the `_build/test/cover` directory.
+
 ## JSON Body for POST and PUT Requests
 
 The JSON schema used to post and update records is as follows:
