@@ -13,14 +13,12 @@ public class PartTimeEmployee(string fullname, int hoursWorked, ISalaryCalculato
     public string FullName { get; set; } = fullname;
     public int HoursWorked { get; set; } = hoursWorked;
 
-    private readonly ISalaryCalculator _salaryCalculator = salaryCalculator;
-
     /// <summary>
     /// Calculates the salary of the employee based on the hours worked.
     /// </summary>
     /// <returns>The calculated salary.</returns>
     public decimal CalculateSalary()
     {
-        return _salaryCalculator.CalculateSalary(HoursWorked);
+        return salaryCalculator.CalculateSalary(HoursWorked);
     }
 }
