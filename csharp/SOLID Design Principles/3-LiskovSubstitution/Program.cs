@@ -1,18 +1,11 @@
-﻿using Liskov;
+﻿using Liskov.Factories;
+using Liskov.Resources;
+using Liskov.Services;
 
-CalculateSalaryMonthly(new List<Employee>() {
-    new EmployeeFullTime("Pepito Pérez", 160, 10),
-    new EmployeeContractor("Manuel Lopera", 180, 0)
-});
+Payroll.CalculateSalaryMonthly([
+    EmployeeFactory.CreateEmployee("Pepito Pérez", 160, 10, EmployeeType.FullTime),
+    EmployeeFactory.CreateEmployee("Manuel Lopera", 180, 0, EmployeeType.Contractor)
+]);
 
-void CalculateSalaryMonthly(List<Employee> employees) 
-{
-    foreach (var item in employees)
-    {
-        decimal salary = item.CalculateSalary((item is EmployeeFullTime));
-        Console.WriteLine($"The {item.Fullname}'s salary is {salary}");
-    }
-
-    Console.WriteLine("Press any key to finish...");
-    Console.ReadKey();
-}
+Console.WriteLine("Press any key to finish...");
+Console.ReadKey();
