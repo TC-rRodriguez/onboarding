@@ -1,0 +1,18 @@
+{application, api, [
+    {description, "An OTP application"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {api_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        cowboy,
+        ranch,
+        jsx,
+        eunit
+    ]},
+    {env, []},
+    {modules, [api_app, api_sup]},
+    {licenses, ["Apache-2.0"]},
+    {links, []}
+ ]}.

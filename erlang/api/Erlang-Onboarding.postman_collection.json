@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "6d8531b3-23ac-44d7-937a-9469b85dfc44",
+		"name": "Erlang-Onboarding",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40622145"
+	},
+	"item": [
+		{
+			"name": "Options",
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/events",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEvent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/events/{{eventType}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"events",
+						"{{eventType}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllEvents",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/events",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostEvent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"event_type\": \"Arrival\",\n  \"data\": {\n    \"first_name\": \"Adam\",\n    \"gender\": \"M\",\n    \"last_name\": \"Everyman\",\n    \"mrn\": \"99991946\",\n    \"organization\": \"GPXS87a6lEnkmzONMeR2qIVg\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/events",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutEvent",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"event_type\": \"Arrival\",\n  \"data\": {\n    \"first_name\": \"Frank\",\n    \"gender\": \"M\",\n    \"last_name\": \"Everyman\",\n    \"mrn\": \"99991946\",\n    \"organization\": \"GPXS87a6lEnkmzONMeR2qIVg\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/events",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEvent",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/events/{{eventType}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"events",
+						"{{eventType}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "eventType",
+			"value": "Arrival",
+			"type": "string"
+		}
+	]
+}
