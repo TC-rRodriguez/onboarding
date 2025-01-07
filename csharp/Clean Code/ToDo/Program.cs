@@ -40,7 +40,7 @@ internal static class Program
                     Console.WriteLine("Invalid option");
                     break;
             }
-        } while (menuOption != 4);
+        } while (menuOption != ExitOption);
     }
 
     /// <summary>
