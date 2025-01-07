@@ -1,4 +1,5 @@
-﻿using InterfaceSegregation;
+using InterfaceSegregation;
+using InterfaceSegregation.Entities;
 
 new Developer().Develop();
 
