@@ -1,12 +1,20 @@
 using System.Text;
+using Api.Interfaces;
 
-namespace DependencyInversion
+namespace DependencyInversion;
+
+/// <summary>
+/// Represents a logbook for recording descriptions.
+/// </summary>
+public class Logbook : ILogBook
 {
-    public class Logbook
+    /// <summary>
+    /// Adds a description to the logbook.
+    /// </summary>
+    /// <param name="description">The description to add.</param>
+    public void Add(string description)
     {
-        public void Add(string description)
-        {
-            File.AppendAllText(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logbook.txt"), $"{description}\n", Encoding.Unicode);
-        }
+        var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logbook.txt");
+        File.AppendAllText(filePath, $"{description}\n", Encoding.Unicode);
     }
 }
